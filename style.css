@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1f20;
+}
+h1{
+    font-family: "Poppins";
+    font-size: 40px;
+    color: #d7b94c;
+}
+.typewriter{
+    position: relative;
+}
+@keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+  }
+.typewriter::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+    color: white;
+    background-color: #1d1f20;
+    width: 100%;
+    animation: typing 2s steps(14, end) forwards,
+    blink-caret 0.75s step-end infinite,
+    cursor-blink 1s steps(2) infinite;
+}
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+@keyframes line {
+    50%{
+        color: transparent;
+    }
+}
+
